@@ -142,7 +142,7 @@
             // 
             // deleteBtn
             // 
-            this.deleteBtn.Location = new System.Drawing.Point(463, 331);
+            this.deleteBtn.Location = new System.Drawing.Point(430, 331);
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(94, 29);
             this.deleteBtn.TabIndex = 30;
@@ -151,7 +151,7 @@
             // 
             // insertBtn
             // 
-            this.insertBtn.Location = new System.Drawing.Point(316, 331);
+            this.insertBtn.Location = new System.Drawing.Point(283, 331);
             this.insertBtn.Name = "insertBtn";
             this.insertBtn.Size = new System.Drawing.Size(94, 29);
             this.insertBtn.TabIndex = 29;

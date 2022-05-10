@@ -36,6 +36,7 @@
             this.insertBtn = new System.Windows.Forms.Button();
             this.modifyBtn = new System.Windows.Forms.Button();
             this.searchBtn = new System.Windows.Forms.Button();
+            this.databaseBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // fileNameTxtBox
@@ -115,11 +116,21 @@
             this.searchBtn.UseVisualStyleBackColor = true;
             this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
+            // databaseBtn
+            // 
+            this.databaseBtn.Location = new System.Drawing.Point(279, 319);
+            this.databaseBtn.Name = "databaseBtn";
+            this.databaseBtn.Size = new System.Drawing.Size(94, 29);
+            this.databaseBtn.TabIndex = 21;
+            this.databaseBtn.Text = "database";
+            this.databaseBtn.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.databaseBtn);
             this.Controls.Add(this.searchBtn);
             this.Controls.Add(this.modifyBtn);
             this.Controls.Add(this.insertBtn);
@@ -146,5 +157,6 @@
         private Button insertBtn;
         private Button modifyBtn;
         private Button searchBtn;
+        private Button databaseBtn;
     }
 }
