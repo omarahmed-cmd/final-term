@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.fileNameTxtBox = new System.Windows.Forms.TextBox();
+            this.fileNameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.createFileBtn = new System.Windows.Forms.Button();
             this.deleteFileBtn = new System.Windows.Forms.Button();
@@ -39,29 +39,31 @@
             this.databaseBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // fileNameTxtBox
+            // fileNameTextBox
             // 
-            this.fileNameTxtBox.Location = new System.Drawing.Point(298, 46);
-            this.fileNameTxtBox.Name = "fileNameTxtBox";
-            this.fileNameTxtBox.Size = new System.Drawing.Size(143, 27);
-            this.fileNameTxtBox.TabIndex = 0;
-            this.fileNameTxtBox.TextChanged += new System.EventHandler(this.fileNameTxtBox_TextChanged);
+            this.fileNameTextBox.Location = new System.Drawing.Point(261, 34);
+            this.fileNameTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.fileNameTextBox.Name = "fileNameTextBox";
+            this.fileNameTextBox.Size = new System.Drawing.Size(126, 23);
+            this.fileNameTextBox.TabIndex = 0;
+            this.fileNameTextBox.TextChanged += new System.EventHandler(this.fileNameTxtBox_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(204, 49);
+            this.label1.Location = new System.Drawing.Point(178, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 20);
+            this.label1.Size = new System.Drawing.Size(56, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "file name";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // createFileBtn
             // 
-            this.createFileBtn.Location = new System.Drawing.Point(261, 92);
+            this.createFileBtn.Location = new System.Drawing.Point(228, 69);
+            this.createFileBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.createFileBtn.Name = "createFileBtn";
-            this.createFileBtn.Size = new System.Drawing.Size(94, 29);
+            this.createFileBtn.Size = new System.Drawing.Size(82, 22);
             this.createFileBtn.TabIndex = 2;
             this.createFileBtn.Text = "create";
             this.createFileBtn.UseVisualStyleBackColor = true;
@@ -69,9 +71,10 @@
             // 
             // deleteFileBtn
             // 
-            this.deleteFileBtn.Location = new System.Drawing.Point(380, 92);
+            this.deleteFileBtn.Location = new System.Drawing.Point(332, 69);
+            this.deleteFileBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.deleteFileBtn.Name = "deleteFileBtn";
-            this.deleteFileBtn.Size = new System.Drawing.Size(94, 29);
+            this.deleteFileBtn.Size = new System.Drawing.Size(82, 22);
             this.deleteFileBtn.TabIndex = 3;
             this.deleteFileBtn.Text = "delete";
             this.deleteFileBtn.UseVisualStyleBackColor = true;
@@ -82,18 +85,19 @@
             this.existLabel.AutoSize = true;
             this.existLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.existLabel.ForeColor = System.Drawing.Color.IndianRed;
-            this.existLabel.Location = new System.Drawing.Point(506, 49);
+            this.existLabel.Location = new System.Drawing.Point(443, 37);
             this.existLabel.Name = "existLabel";
-            this.existLabel.Size = new System.Drawing.Size(205, 28);
+            this.existLabel.Size = new System.Drawing.Size(165, 21);
             this.existLabel.TabIndex = 4;
             this.existLabel.Text = "this file is already exist";
             this.existLabel.Visible = false;
             // 
             // insertBtn
             // 
-            this.insertBtn.Location = new System.Drawing.Point(131, 319);
+            this.insertBtn.Location = new System.Drawing.Point(115, 234);
+            this.insertBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.insertBtn.Name = "insertBtn";
-            this.insertBtn.Size = new System.Drawing.Size(94, 29);
+            this.insertBtn.Size = new System.Drawing.Size(80, 33);
             this.insertBtn.TabIndex = 17;
             this.insertBtn.Text = "insert";
             this.insertBtn.UseVisualStyleBackColor = true;
@@ -101,18 +105,20 @@
             // 
             // modifyBtn
             // 
-            this.modifyBtn.Location = new System.Drawing.Point(424, 319);
+            this.modifyBtn.Location = new System.Drawing.Point(371, 239);
+            this.modifyBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.modifyBtn.Name = "modifyBtn";
-            this.modifyBtn.Size = new System.Drawing.Size(94, 29);
+            this.modifyBtn.Size = new System.Drawing.Size(82, 28);
             this.modifyBtn.TabIndex = 19;
             this.modifyBtn.Text = "modify";
             this.modifyBtn.UseVisualStyleBackColor = true;
             // 
             // searchBtn
             // 
-            this.searchBtn.Location = new System.Drawing.Point(555, 319);
+            this.searchBtn.Location = new System.Drawing.Point(486, 239);
+            this.searchBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchBtn.Name = "searchBtn";
-            this.searchBtn.Size = new System.Drawing.Size(94, 29);
+            this.searchBtn.Size = new System.Drawing.Size(82, 22);
             this.searchBtn.TabIndex = 20;
             this.searchBtn.Text = "search";
             this.searchBtn.UseVisualStyleBackColor = true;
@@ -120,18 +126,19 @@
             // 
             // databaseBtn
             // 
-            this.databaseBtn.Location = new System.Drawing.Point(279, 319);
+            this.databaseBtn.Location = new System.Drawing.Point(242, 228);
+            this.databaseBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.databaseBtn.Name = "databaseBtn";
-            this.databaseBtn.Size = new System.Drawing.Size(94, 29);
+            this.databaseBtn.Size = new System.Drawing.Size(82, 44);
             this.databaseBtn.TabIndex = 21;
-            this.databaseBtn.Text = "database";
+            this.databaseBtn.Text = "Insert In Database";
             this.databaseBtn.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(700, 338);
             this.Controls.Add(this.databaseBtn);
             this.Controls.Add(this.searchBtn);
             this.Controls.Add(this.modifyBtn);
@@ -140,7 +147,8 @@
             this.Controls.Add(this.deleteFileBtn);
             this.Controls.Add(this.createFileBtn);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.fileNameTxtBox);
+            this.Controls.Add(this.fileNameTextBox);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "gym application";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -151,7 +159,7 @@
 
         #endregion
 
-        private TextBox fileNameTxtBox;
+        private TextBox fileNameTextBox;
         private Label label1;
         private Button createFileBtn;
         private Button deleteFileBtn;

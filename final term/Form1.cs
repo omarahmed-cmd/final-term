@@ -16,7 +16,7 @@ namespace final_term
         private void button2_Click(object sender, EventArgs e)
         {
             File.Delete(filename);
-            fileNameTxtBox.Clear();
+            fileNameTextBox.Clear();
             existLabel.Visible = false;
 
         }
@@ -38,10 +38,11 @@ namespace final_term
 
         private void createFileBtn_Click(object sender, EventArgs e)
         {
-            filename = "d:\\" + fileNameTxtBox.Text + ".txt";
+            filename = "d:\\" + fileNameTextBox.Text + ".txt";
             if (!File.Exists(filename))
             {
                 File.Create(filename).Close();
+                MessageBox.Show("File is Created successfully!", "Note", MessageBoxButtons.OK, MessageBoxIcon.Error);   
             }
             else
             {
