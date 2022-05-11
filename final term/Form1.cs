@@ -1,3 +1,15 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.IO;
+using System.Data.SqlClient;
+
 namespace final_term
 {
     public partial class Form1 : Form
@@ -7,6 +19,8 @@ namespace final_term
         {
             InitializeComponent();
         }
+        SqlConnection con;
+        
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -64,6 +78,11 @@ namespace final_term
         private void insertBtn_Click(object sender, EventArgs e)
         {
             new Form2().Show();
+        }
+
+        private void databaseBtn_Click(object sender, EventArgs e)
+        {
+    
         }
     }
 }

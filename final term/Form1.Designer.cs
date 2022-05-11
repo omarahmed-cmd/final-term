@@ -131,8 +131,9 @@
             this.databaseBtn.Name = "databaseBtn";
             this.databaseBtn.Size = new System.Drawing.Size(82, 44);
             this.databaseBtn.TabIndex = 21;
-            this.databaseBtn.Text = "Insert In Database";
+            this.databaseBtn.Text = "Connect  Database";
             this.databaseBtn.UseVisualStyleBackColor = true;
+            this.databaseBtn.Click += new System.EventHandler(this.databaseBtn_Click);
             // 
             // Form1
             // 
