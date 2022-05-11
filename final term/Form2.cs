@@ -14,6 +14,7 @@ namespace final_term
     public partial class Form2 : Form
     {
         public string filename;
+        
         public Form2()
         {
             InitializeComponent();
@@ -21,7 +22,7 @@ namespace final_term
 
         private void Save_Click(object sender, EventArgs e)
         {
-            filename = "d:\\";
+           // filename = "d:\\" + fileNameTextBox.Text + ".txt";
             BinaryWriter bw = new BinaryWriter(File.Open(filename, FileMode.Open, FileAccess.Write));
             int length = (int)bw.BaseStream.Length;
             if (length != 0)

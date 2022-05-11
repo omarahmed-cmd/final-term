@@ -19,8 +19,7 @@ namespace final_term
         {
             InitializeComponent();
         }
-        SqlConnection con;
-        
+      
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -77,7 +76,8 @@ namespace final_term
 
         private void insertBtn_Click(object sender, EventArgs e)
         {
-            new Form2().Show();
+            Form2 f1=new Form2();
+            f1.Show();
         }
 
         private void databaseBtn_Click(object sender, EventArgs e)

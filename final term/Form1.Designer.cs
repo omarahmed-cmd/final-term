@@ -94,7 +94,7 @@
             // 
             // insertBtn
             // 
-            this.insertBtn.Location = new System.Drawing.Point(115, 234);
+            this.insertBtn.Location = new System.Drawing.Point(89, 234);
             this.insertBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.insertBtn.Name = "insertBtn";
             this.insertBtn.Size = new System.Drawing.Size(80, 33);
@@ -139,7 +139,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 338);
+            this.ClientSize = new System.Drawing.Size(700, 331);
             this.Controls.Add(this.databaseBtn);
             this.Controls.Add(this.searchBtn);
             this.Controls.Add(this.modifyBtn);
