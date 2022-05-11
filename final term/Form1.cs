@@ -2,6 +2,7 @@ namespace final_term
 {
     public partial class Form1 : Form
     {
+        public string filename;
         public Form1()
         {
             InitializeComponent();
@@ -14,6 +15,9 @@ namespace final_term
 
         private void button2_Click(object sender, EventArgs e)
         {
+            File.Delete(filename);
+            fileNameTxtBox.Clear();
+            existLabel.Visible = false;
 
         }
 
@@ -34,12 +38,31 @@ namespace final_term
 
         private void createFileBtn_Click(object sender, EventArgs e)
         {
+            filename = "d:\\" + fileNameTxtBox.Text + ".txt";
+            if (!File.Exists(filename))
+            {
+                File.Create(filename).Close();
+            }
+            else
+            {
+                existLabel.Visible = true;
 
+            }
         }
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void fileNameTxtBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void insertBtn_Click(object sender, EventArgs e)
+        {
+            new Form2().Show();
         }
     }
 }

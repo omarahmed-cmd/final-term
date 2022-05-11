@@ -45,6 +45,7 @@
             this.fileNameTxtBox.Name = "fileNameTxtBox";
             this.fileNameTxtBox.Size = new System.Drawing.Size(143, 27);
             this.fileNameTxtBox.TabIndex = 0;
+            this.fileNameTxtBox.TextChanged += new System.EventHandler(this.fileNameTxtBox_TextChanged);
             // 
             // label1
             // 
@@ -96,6 +97,7 @@
             this.insertBtn.TabIndex = 17;
             this.insertBtn.Text = "insert";
             this.insertBtn.UseVisualStyleBackColor = true;
+            this.insertBtn.Click += new System.EventHandler(this.insertBtn_Click);
             // 
             // modifyBtn
             // 
