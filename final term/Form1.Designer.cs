@@ -41,7 +41,7 @@
             // 
             // fileNameTextBox
             // 
-            this.fileNameTextBox.Location = new System.Drawing.Point(261, 34);
+            this.fileNameTextBox.Location = new System.Drawing.Point(252, 29);
             this.fileNameTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fileNameTextBox.Name = "fileNameTextBox";
             this.fileNameTextBox.Size = new System.Drawing.Size(126, 23);
@@ -60,7 +60,7 @@
             // 
             // createFileBtn
             // 
-            this.createFileBtn.Location = new System.Drawing.Point(228, 69);
+            this.createFileBtn.Location = new System.Drawing.Point(224, 98);
             this.createFileBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.createFileBtn.Name = "createFileBtn";
             this.createFileBtn.Size = new System.Drawing.Size(82, 22);
@@ -71,7 +71,7 @@
             // 
             // deleteFileBtn
             // 
-            this.deleteFileBtn.Location = new System.Drawing.Point(332, 69);
+            this.deleteFileBtn.Location = new System.Drawing.Point(328, 98);
             this.deleteFileBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.deleteFileBtn.Name = "deleteFileBtn";
             this.deleteFileBtn.Size = new System.Drawing.Size(82, 22);
@@ -83,11 +83,11 @@
             // existLabel
             // 
             this.existLabel.AutoSize = true;
-            this.existLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.existLabel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.existLabel.ForeColor = System.Drawing.Color.IndianRed;
-            this.existLabel.Location = new System.Drawing.Point(443, 37);
+            this.existLabel.Location = new System.Drawing.Point(252, 59);
             this.existLabel.Name = "existLabel";
-            this.existLabel.Size = new System.Drawing.Size(165, 21);
+            this.existLabel.Size = new System.Drawing.Size(144, 19);
             this.existLabel.TabIndex = 4;
             this.existLabel.Text = "this file is already exist";
             this.existLabel.Visible = false;
@@ -139,6 +139,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(700, 331);
             this.Controls.Add(this.databaseBtn);
             this.Controls.Add(this.searchBtn);

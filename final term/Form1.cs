@@ -19,7 +19,7 @@ namespace final_term
         {
             InitializeComponent();
         }
-      
+        SqlConnection con;
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -82,7 +82,16 @@ namespace final_term
 
         private void databaseBtn_Click(object sender, EventArgs e)
         {
-    
+            try
+            {
+                con = new SqlConnection("Data Source=DESKTOP-SF2D5NT\\SQLEXPRESS;Initial Catalog=master;Integrated Security=True");
+                con.Open();
+                label1.Text = ("connected successfully!");
+            }
+            catch (Exception ex)
+            { 
+                label1.Text = ex.Message;
+            }
         }
     }
 }
