@@ -49,5 +49,37 @@ namespace final_term
         {
 
         }
+
+        private void fileNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void createFileBtn_Click(object sender, EventArgs e)
+        {
+            filename = "d:\\" + fileNameTxtBox.Text + ".txt";
+            if (!File.Exists(filename))
+            {
+                File.Create(filename).Close();
+                MessageBox.Show("File is Created successfully!", "Note", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                existLabel.Visible = true;
+
+            }
+        }
+
+        private void deleteFileBtn_Click(object sender, EventArgs e)
+        {
+            File.Delete(filename);
+            fileNameTxtBox.Clear();
+            existLabel.Visible = false;
+        }
+
+        private void existLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

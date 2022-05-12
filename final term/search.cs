@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace final_term
 {
-    public partial class Form3 : Form
+    public partial class search : Form
     {
-        public Form3()
+        public search()
         {
             InitializeComponent();
         }
