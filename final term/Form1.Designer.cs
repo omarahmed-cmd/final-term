@@ -31,7 +31,7 @@
             this.insertBtn = new System.Windows.Forms.Button();
             this.modifyBtn = new System.Windows.Forms.Button();
             this.searchBtn = new System.Windows.Forms.Button();
-            this.databaseBtn = new System.Windows.Forms.Button();
+            this.displayBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // insertBtn
@@ -39,11 +39,11 @@
             this.insertBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.insertBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.insertBtn.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.insertBtn.Location = new System.Drawing.Point(275, 152);
+            this.insertBtn.Location = new System.Drawing.Point(262, 150);
             this.insertBtn.Name = "insertBtn";
             this.insertBtn.Size = new System.Drawing.Size(94, 59);
             this.insertBtn.TabIndex = 17;
-            this.insertBtn.Text = "Binary";
+            this.insertBtn.Text = "insert";
             this.insertBtn.UseVisualStyleBackColor = false;
             this.insertBtn.Click += new System.EventHandler(this.insertBtn_Click);
             // 
@@ -52,7 +52,7 @@
             this.modifyBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.modifyBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.modifyBtn.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.modifyBtn.Location = new System.Drawing.Point(426, 217);
+            this.modifyBtn.Location = new System.Drawing.Point(413, 215);
             this.modifyBtn.Name = "modifyBtn";
             this.modifyBtn.Size = new System.Drawing.Size(94, 59);
             this.modifyBtn.TabIndex = 19;
@@ -65,7 +65,7 @@
             this.searchBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.searchBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.searchBtn.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.searchBtn.Location = new System.Drawing.Point(426, 152);
+            this.searchBtn.Location = new System.Drawing.Point(413, 150);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(94, 59);
             this.searchBtn.TabIndex = 20;
@@ -73,18 +73,18 @@
             this.searchBtn.UseVisualStyleBackColor = false;
             this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
-            // databaseBtn
+            // displayBtn
             // 
-            this.databaseBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.databaseBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.databaseBtn.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.databaseBtn.Location = new System.Drawing.Point(275, 217);
-            this.databaseBtn.Name = "databaseBtn";
-            this.databaseBtn.Size = new System.Drawing.Size(94, 59);
-            this.databaseBtn.TabIndex = 21;
-            this.databaseBtn.Text = "Connect  Database";
-            this.databaseBtn.UseVisualStyleBackColor = false;
-            this.databaseBtn.Click += new System.EventHandler(this.databaseBtn_Click);
+            this.displayBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.displayBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.displayBtn.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.displayBtn.Location = new System.Drawing.Point(262, 215);
+            this.displayBtn.Name = "displayBtn";
+            this.displayBtn.Size = new System.Drawing.Size(94, 59);
+            this.displayBtn.TabIndex = 21;
+            this.displayBtn.Text = "display";
+            this.displayBtn.UseVisualStyleBackColor = false;
+            this.displayBtn.Click += new System.EventHandler(this.displayBtn_Click);
             // 
             // Form1
             // 
@@ -92,7 +92,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 441);
-            this.Controls.Add(this.databaseBtn);
+            this.Controls.Add(this.displayBtn);
             this.Controls.Add(this.searchBtn);
             this.Controls.Add(this.modifyBtn);
             this.Controls.Add(this.insertBtn);
@@ -107,6 +107,6 @@
         private Button insertBtn;
         private Button modifyBtn;
         private Button searchBtn;
-        private Button databaseBtn;
+        private Button displayBtn;
     }
 }
