@@ -19,7 +19,7 @@ namespace final_term
         {
             InitializeComponent();
         }
-      
+        
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -63,18 +63,23 @@ namespace final_term
 
         private void insertBtn_Click(object sender, EventArgs e)
         {
-            Form2 f1=new Form2();
-            f1.Show();
+            this.Hide();
+            Form2 f2=new Form2();
+            f2.Show();
         }
 
-        private void databaseBtn_Click(object sender, EventArgs e)
-        {
-    
-        }
+       
 
         private void modifyBtn_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void displayBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form4 form4 = new Form4();  
+            form4.Show();
         }
     }
 }

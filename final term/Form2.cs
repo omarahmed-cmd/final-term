@@ -11,37 +11,50 @@ using System.IO;
 
 namespace final_term
 {
+    
     public partial class Form2 : Form
     {
-        public string filename;
         
+
         public Form2()
         {
             InitializeComponent();
+            infocs.filename = "D://" + fileNameTxtBox.Text + ".txt" ;
         }
 
         private void Save_Click(object sender, EventArgs e)
         {
-           // filename = "d:\\" + fileNameTextBox.Text + ".txt";
-            BinaryWriter bw = new BinaryWriter(File.Open(filename, FileMode.Open, FileAccess.Write));
+           
+            BinaryWriter bw = new BinaryWriter(File.Open(infocs.filename, FileMode.Open, FileAccess.Write));
             int length = (int)bw.BaseStream.Length;
             if (length != 0)
             {
                 bw.BaseStream.Seek(length, SeekOrigin.Begin);
             }
-            bw.Write(int.Parse(IDtextBox.Text));    // Id TextBox:
+            bw.Write(Int32.Parse(IDTxtBox.Text));    // Id TextBox  4-byte
 
-            Name_textBox.Text = Name_textBox.Text.PadRight(9); // Name
-            bw.Write(Name_textBox.Text.Substring(0, 9));
+            nameTextBox.Text = nameTextBox.Text.PadRight(9); // Name  9-byte
+            bw.Write(nameTextBox.Text.Substring(0, 9));
+            
 
-            bw.Write(int.Parse(Age_textBox.Text));   //Age
+            bw.Write(Int32.Parse(AgeTxtBox.Text));   //Age  4-byte
 
-            phone_textBox.Text = phone_textBox.Text.PadRight(11);
-            bw.Write(phone_textBox.Text.Substring(0, 11));  //Phone_Number
+            phoneTxtBox.Text = phoneTxtBox.Text.PadRight(11); 
+            bw.Write(phoneTxtBox.Text.Substring(0, 11));  //Phone_Number 11-byte
 
-            IDtextBox.Text = Name_textBox.Text = Age_textBox.Text = phone_textBox.Text;
+            bw.Write(Int32.Parse(hieghtTxtBox.Text)); // int  4-byte
+
+            bw.Write(Int32.Parse(wieghtTxtBox.Text)); // int  4-byte
+
+            //IDTxtBox.Text = nameTextBox.Text = AgeTxtBox.Text = phoneTxtBox.Text;
 
             MessageBox.Show(" Data is Saved Successfully! ");
+            IDTxtBox.Clear();
+            nameTextBox.Clear();
+            phoneTxtBox.Clear();
+            AgeTxtBox.Clear();
+            hieghtTxtBox.Clear();
+            wieghtTxtBox.Clear();
             bw.Close();
         }
 
@@ -57,11 +70,11 @@ namespace final_term
 
         private void createFileBtn_Click(object sender, EventArgs e)
         {
-            filename = "d:\\" + fileNameTxtBox.Text + ".txt";
-            if (!File.Exists(filename))
+            infocs.filename = "d:\\" + fileNameTxtBox.Text + ".txt";
+            if (!File.Exists(infocs.filename))
             {
-                File.Create(filename).Close();
-                MessageBox.Show("File is Created successfully!", "Note", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                File.Create(infocs.filename).Close();
+                MessageBox.Show("File is Created successfully!", "Note", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -72,7 +85,7 @@ namespace final_term
 
         private void deleteFileBtn_Click(object sender, EventArgs e)
         {
-            File.Delete(filename);
+            File.Delete(infocs.filename);
             fileNameTxtBox.Clear();
             existLabel.Visible = false;
         }
@@ -80,6 +93,18 @@ namespace final_term
         private void existLabel_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form1 form = new Form1();
+            form.Show();
         }
     }
 }

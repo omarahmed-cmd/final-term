@@ -36,17 +36,17 @@
             this.label3 = new System.Windows.Forms.Label();
             this.wieghtTxtBox = new System.Windows.Forms.TextBox();
             this.hieghtTxtBox = new System.Windows.Forms.TextBox();
-            this.Age_textBox = new System.Windows.Forms.TextBox();
-            this.phone_textBox = new System.Windows.Forms.TextBox();
-            this.Name_textBox = new System.Windows.Forms.TextBox();
-            this.IDtextBox = new System.Windows.Forms.TextBox();
-            this.deleteBtn = new System.Windows.Forms.Button();
+            this.AgeTxtBox = new System.Windows.Forms.TextBox();
+            this.phoneTxtBox = new System.Windows.Forms.TextBox();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.IDTxtBox = new System.Windows.Forms.TextBox();
             this.insertBtn = new System.Windows.Forms.Button();
             this.existLabel = new System.Windows.Forms.Label();
             this.deleteFileBtn = new System.Windows.Forms.Button();
             this.createFileBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.fileNameTxtBox = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label8
@@ -123,49 +123,39 @@
             this.hieghtTxtBox.Size = new System.Drawing.Size(143, 27);
             this.hieghtTxtBox.TabIndex = 21;
             // 
-            // Age_textBox
+            // AgeTxtBox
             // 
-            this.Age_textBox.Location = new System.Drawing.Point(128, 271);
-            this.Age_textBox.Name = "Age_textBox";
-            this.Age_textBox.Size = new System.Drawing.Size(143, 27);
-            this.Age_textBox.TabIndex = 20;
+            this.AgeTxtBox.Location = new System.Drawing.Point(128, 271);
+            this.AgeTxtBox.Name = "AgeTxtBox";
+            this.AgeTxtBox.Size = new System.Drawing.Size(143, 27);
+            this.AgeTxtBox.TabIndex = 20;
             // 
-            // phone_textBox
+            // phoneTxtBox
             // 
-            this.phone_textBox.Location = new System.Drawing.Point(496, 197);
-            this.phone_textBox.Name = "phone_textBox";
-            this.phone_textBox.Size = new System.Drawing.Size(143, 27);
-            this.phone_textBox.TabIndex = 19;
+            this.phoneTxtBox.Location = new System.Drawing.Point(496, 197);
+            this.phoneTxtBox.Name = "phoneTxtBox";
+            this.phoneTxtBox.Size = new System.Drawing.Size(143, 27);
+            this.phoneTxtBox.TabIndex = 19;
             // 
-            // Name_textBox
+            // nameTextBox
             // 
-            this.Name_textBox.Location = new System.Drawing.Point(310, 197);
-            this.Name_textBox.Name = "Name_textBox";
-            this.Name_textBox.Size = new System.Drawing.Size(143, 27);
-            this.Name_textBox.TabIndex = 18;
+            this.nameTextBox.Location = new System.Drawing.Point(310, 197);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(143, 27);
+            this.nameTextBox.TabIndex = 18;
             // 
-            // IDtextBox
+            // IDTxtBox
             // 
-            this.IDtextBox.Location = new System.Drawing.Point(128, 197);
-            this.IDtextBox.Name = "IDtextBox";
-            this.IDtextBox.Size = new System.Drawing.Size(143, 27);
-            this.IDtextBox.TabIndex = 17;
-            this.IDtextBox.TextChanged += new System.EventHandler(this.idTxtBox_TextChanged);
-            // 
-            // deleteBtn
-            // 
-            this.deleteBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.deleteBtn.Location = new System.Drawing.Point(413, 341);
-            this.deleteBtn.Name = "deleteBtn";
-            this.deleteBtn.Size = new System.Drawing.Size(94, 29);
-            this.deleteBtn.TabIndex = 30;
-            this.deleteBtn.Text = "delete";
-            this.deleteBtn.UseVisualStyleBackColor = true;
+            this.IDTxtBox.Location = new System.Drawing.Point(128, 197);
+            this.IDTxtBox.Name = "IDTxtBox";
+            this.IDTxtBox.Size = new System.Drawing.Size(143, 27);
+            this.IDTxtBox.TabIndex = 17;
+            this.IDTxtBox.TextChanged += new System.EventHandler(this.idTxtBox_TextChanged);
             // 
             // insertBtn
             // 
             this.insertBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.insertBtn.Location = new System.Drawing.Point(266, 341);
+            this.insertBtn.Location = new System.Drawing.Point(324, 347);
             this.insertBtn.Name = "insertBtn";
             this.insertBtn.Size = new System.Drawing.Size(94, 29);
             this.insertBtn.TabIndex = 29;
@@ -227,18 +217,29 @@
             this.fileNameTxtBox.TabIndex = 31;
             this.fileNameTxtBox.TextChanged += new System.EventHandler(this.fileNameTextBox_TextChanged);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 29);
+            this.button1.TabIndex = 36;
+            this.button1.Text = "back";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 451);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.existLabel);
             this.Controls.Add(this.deleteFileBtn);
             this.Controls.Add(this.createFileBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.fileNameTxtBox);
-            this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.insertBtn);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -248,10 +249,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.wieghtTxtBox);
             this.Controls.Add(this.hieghtTxtBox);
-            this.Controls.Add(this.Age_textBox);
-            this.Controls.Add(this.phone_textBox);
-            this.Controls.Add(this.Name_textBox);
-            this.Controls.Add(this.IDtextBox);
+            this.Controls.Add(this.AgeTxtBox);
+            this.Controls.Add(this.phoneTxtBox);
+            this.Controls.Add(this.nameTextBox);
+            this.Controls.Add(this.IDTxtBox);
             this.Name = "Form2";
             this.Text = "Form2";
             this.ResumeLayout(false);
@@ -269,16 +270,16 @@
         private Label label3;
         private TextBox wieghtTxtBox;
         private TextBox hieghtTxtBox;
-        private TextBox Age_textBox;
-        private TextBox phone_textBox;
-        private TextBox Name_textBox;
-        private TextBox IDtextBox;
-        private Button deleteBtn;
+        private TextBox AgeTxtBox;
+        private TextBox phoneTxtBox;
+        private TextBox nameTextBox;
+        private TextBox IDTxtBox;
         private Button insertBtn;
         private Label existLabel;
         private Button deleteFileBtn;
         private Button createFileBtn;
         private Label label1;
         private TextBox fileNameTxtBox;
+        private Button button1;
     }
 }
