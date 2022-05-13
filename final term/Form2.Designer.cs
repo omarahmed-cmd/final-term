@@ -41,12 +41,11 @@
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.IDTxtBox = new System.Windows.Forms.TextBox();
             this.insertBtn = new System.Windows.Forms.Button();
-            this.existLabel = new System.Windows.Forms.Label();
-            this.deleteFileBtn = new System.Windows.Forms.Button();
-            this.createFileBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.fileNameTxtBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.DisplayBtn = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label8
@@ -154,50 +153,15 @@
             // 
             // insertBtn
             // 
+            this.insertBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.insertBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.insertBtn.Location = new System.Drawing.Point(324, 347);
             this.insertBtn.Name = "insertBtn";
             this.insertBtn.Size = new System.Drawing.Size(94, 29);
             this.insertBtn.TabIndex = 29;
             this.insertBtn.Text = "Save";
-            this.insertBtn.UseVisualStyleBackColor = true;
+            this.insertBtn.UseVisualStyleBackColor = false;
             this.insertBtn.Click += new System.EventHandler(this.Save_Click);
-            // 
-            // existLabel
-            // 
-            this.existLabel.AutoSize = true;
-            this.existLabel.BackColor = System.Drawing.SystemColors.Control;
-            this.existLabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.existLabel.ForeColor = System.Drawing.Color.IndianRed;
-            this.existLabel.Location = new System.Drawing.Point(496, 53);
-            this.existLabel.Name = "existLabel";
-            this.existLabel.Size = new System.Drawing.Size(212, 21);
-            this.existLabel.TabIndex = 35;
-            this.existLabel.Text = "this file is already exist";
-            this.existLabel.Visible = false;
-            this.existLabel.Click += new System.EventHandler(this.existLabel_Click);
-            // 
-            // deleteFileBtn
-            // 
-            this.deleteFileBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.deleteFileBtn.Location = new System.Drawing.Point(391, 94);
-            this.deleteFileBtn.Name = "deleteFileBtn";
-            this.deleteFileBtn.Size = new System.Drawing.Size(94, 29);
-            this.deleteFileBtn.TabIndex = 34;
-            this.deleteFileBtn.Text = "delete";
-            this.deleteFileBtn.UseVisualStyleBackColor = true;
-            this.deleteFileBtn.Click += new System.EventHandler(this.deleteFileBtn_Click);
-            // 
-            // createFileBtn
-            // 
-            this.createFileBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.createFileBtn.Location = new System.Drawing.Point(273, 94);
-            this.createFileBtn.Name = "createFileBtn";
-            this.createFileBtn.Size = new System.Drawing.Size(94, 29);
-            this.createFileBtn.TabIndex = 33;
-            this.createFileBtn.Text = "create";
-            this.createFileBtn.UseVisualStyleBackColor = true;
-            this.createFileBtn.Click += new System.EventHandler(this.createFileBtn_Click);
             // 
             // label1
             // 
@@ -219,14 +183,39 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.Location = new System.Drawing.Point(12, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 29);
             this.button1.TabIndex = 36;
             this.button1.Text = "back";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // DisplayBtn
+            // 
+            this.DisplayBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.DisplayBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DisplayBtn.Location = new System.Drawing.Point(628, 51);
+            this.DisplayBtn.Name = "DisplayBtn";
+            this.DisplayBtn.Size = new System.Drawing.Size(94, 43);
+            this.DisplayBtn.TabIndex = 37;
+            this.DisplayBtn.Text = "Display";
+            this.DisplayBtn.UseVisualStyleBackColor = false;
+            this.DisplayBtn.Click += new System.EventHandler(this.DisplayBtn_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button2.Location = new System.Drawing.Point(628, 100);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(94, 43);
+            this.button2.TabIndex = 38;
+            this.button2.Text = "search";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form2
             // 
@@ -234,10 +223,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 451);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.DisplayBtn);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.existLabel);
-            this.Controls.Add(this.deleteFileBtn);
-            this.Controls.Add(this.createFileBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.fileNameTxtBox);
             this.Controls.Add(this.insertBtn);
@@ -276,10 +264,11 @@
         private TextBox IDTxtBox;
         private Button insertBtn;
         private Label existLabel;
-        private Button deleteFileBtn;
         private Button createFileBtn;
         private Label label1;
         private TextBox fileNameTxtBox;
         private Button button1;
+        private Button DisplayBtn;
+        private Button button2;
     }
 }

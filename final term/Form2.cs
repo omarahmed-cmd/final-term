@@ -19,7 +19,7 @@ namespace final_term
         public Form2()
         {
             InitializeComponent();
-            infocs.filename = "D://" + fileNameTxtBox.Text + ".txt" ;
+            fileNameTxtBox.Text = infocs.filename;
         }
 
         private void Save_Click(object sender, EventArgs e)
@@ -68,42 +68,30 @@ namespace final_term
 
         }
 
-        private void createFileBtn_Click(object sender, EventArgs e)
-        {
-            infocs.filename = "d:\\" + fileNameTxtBox.Text + ".txt";
-            if (!File.Exists(infocs.filename))
-            {
-                File.Create(infocs.filename).Close();
-                MessageBox.Show("File is Created successfully!", "Note", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                existLabel.Visible = true;
+        
 
-            }
-        }
+       
 
-        private void deleteFileBtn_Click(object sender, EventArgs e)
-        {
-            File.Delete(infocs.filename);
-            fileNameTxtBox.Clear();
-            existLabel.Visible = false;
-        }
-
-        private void existLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void deleteBtn_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
             Form1 form = new Form1();
+            form.Show();
+        }
+
+        private void DisplayBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form4 form = new Form4();   
+            form.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form3 form = new Form3();
             form.Show();
         }
     }

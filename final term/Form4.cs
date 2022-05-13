@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace final_term
 {
@@ -16,8 +17,9 @@ namespace final_term
         public Form4()
         {
             InitializeComponent();
+            filenameTxtBox.Text = infocs.filename;
         }
-        
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -42,14 +44,21 @@ namespace final_term
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            displayBtn.Text = "next";
-            BinaryReader br = new BinaryReader(File.Open(infocs.filename, FileMode.Open, FileAccess.Read));
 
-            int num_of_records = (int)br.BaseStream.Length / infocs.recSize;
-
-            if (num_of_records > 0) // If The file Not Empty
+            try
             {
-                try
+                
+                BinaryReader br = new BinaryReader(File.Open(infocs.filename, FileMode.Open, FileAccess.Read));
+
+
+                displayBtn.Text = "next";
+                filenameLabel.Visible = false;
+                filenameTxtBox.Visible = false;
+
+
+                int num_of_records = (int)br.BaseStream.Length / infocs.recSize;
+
+                if (num_of_records > 0) // If The file Not Empty
                 {
                     IDLabel.Visible = true;
                     IDTxtBox.Visible = true;
@@ -72,31 +81,35 @@ namespace final_term
                     IDTxtBox.Text = br.ReadInt32().ToString(); // Read ID and display it in the ID text Box
 
                     nameTxtBox.Text = br.ReadString(); // Read Name 
-                    ageTxtBox.Text = br.ReadString(); // Read phone
-                    phoneTxtBox.Text = br.ReadInt32().ToString(); // Read age
+                    ageTxtBox.Text = br.ReadInt32().ToString(); // Read age
+                    
+                    phoneTxtBox.Text = br.ReadString(); // Read phone
                     hieghtTxtBox.Text = br.ReadInt32().ToString(); // Read hieght
                     wieghtTxtBox.Text = br.ReadInt32().ToString(); // Read wieght
 
-                    //num_of_records - 1
-                    if ((infocs.count / infocs.recSize) >= 1) // If I reach the End of file , Go to the Beginning of file
+                    
+                    if ((infocs.count / infocs.recSize) >= (num_of_records - 1)) // If I reach the End of file , Go to the Beginning of file
                         infocs.count = 0;
                     else
+                    {
                         infocs.count += infocs.recSize;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
+
+                    }
                 }
 
-                
-
-                
-            }
             else MessageBox.Show("Empty File");
             br.Close();
+            }
+            catch 
+            {
+                MessageBox.Show("this file is not exist","ERROR!",MessageBoxButtons.OK ,MessageBoxIcon.Error);
 
+            }
 
         }
+
+            
+        
 
         private void button2_Click(object sender, EventArgs e)
         {

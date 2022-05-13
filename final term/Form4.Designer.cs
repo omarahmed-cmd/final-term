@@ -46,6 +46,8 @@
             this.numOfRecLabel = new System.Windows.Forms.Label();
             this.fileSizeLabel = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.filenameTxtBox = new System.Windows.Forms.TextBox();
+            this.filenameLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // IDTxtBox
@@ -227,12 +229,32 @@
             this.label10.TabIndex = 23;
             this.label10.Text = "file size";
             // 
+            // filenameTxtBox
+            // 
+            this.filenameTxtBox.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.filenameTxtBox.Location = new System.Drawing.Point(585, 62);
+            this.filenameTxtBox.Name = "filenameTxtBox";
+            this.filenameTxtBox.Size = new System.Drawing.Size(227, 39);
+            this.filenameTxtBox.TabIndex = 25;
+            // 
+            // filenameLabel
+            // 
+            this.filenameLabel.AutoSize = true;
+            this.filenameLabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.filenameLabel.Location = new System.Drawing.Point(490, 76);
+            this.filenameLabel.Name = "filenameLabel";
+            this.filenameLabel.Size = new System.Drawing.Size(74, 17);
+            this.filenameLabel.TabIndex = 26;
+            this.filenameLabel.Text = "file name";
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(933, 433);
+            this.Controls.Add(this.filenameLabel);
+            this.Controls.Add(this.filenameTxtBox);
             this.Controls.Add(this.fileSizeLabel);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.numOfRecLabel);
@@ -279,5 +301,7 @@
         private Label numOfRecLabel;
         private Label fileSizeLabel;
         private Label label10;
+        private TextBox filenameTxtBox;
+        private Label filenameLabel;
     }
 }
